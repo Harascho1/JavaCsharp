@@ -9,10 +9,11 @@ public class Letovanje implements IPut,Comparable<IPut>{
 	private String m_nazivDestinacije;
 	private int m_brojDana;
 	private double m_cenaPoDanu;
+	private double inflacija = (Math.random()+1);
 	
 	
 	public double getCena() {
-		return m_cenaPoDanu * m_brojDana * (Math.random()+1);
+		return m_cenaPoDanu * m_brojDana * inflacija;
 	}
 	public Letovanje(String nazivDestinacije, int brojDana, double cenaPoDanu) {
 		m_nazivDestinacije = nazivDestinacije;
